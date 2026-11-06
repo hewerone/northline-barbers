@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Northline Barbers — a modern barbershop website concept by HEWERONE STUDIO.">
+  <meta name="theme-color" content="#11110f">
+  <title>Northline Barbers — Sharp cuts. Good people.</title>
+  <style>
+    :root{--ink:#171714;--paper:#f3f0e8;--muted:#aaa69a;--lime:#d5f36a;--line:rgba(255,255,255,.16);--serif:Georgia,serif;--sans:Arial,Helvetica,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:#f7f5ee;font-family:var(--sans);line-height:1.5}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .logo{font-weight:900;letter-spacing:.12em;font-size:14px}.logo span{color:var(--lime)}
+    .links{display:flex;gap:30px;color:#d4d0c5;font-size:13px}.links a:hover{color:var(--lime)}
+    .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;background:var(--lime);color:#171714;padding:14px 20px;font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border-radius:2px}
+    .hero{min-height:650px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:55px;padding:76px 0 90px}
+    .eyebrow{color:var(--lime);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+    h1{font-size:clamp(54px,7.4vw,100px);line-height:.91;letter-spacing:-.075em;margin:22px 0 24px;max-width:650px}
+    h1 em{font-family:var(--serif);font-weight:400;color:var(--lime);letter-spacing:-.07em}
+    .intro{max-width:420px;color:#c3bfb4;font-size:16px;margin:0 0 32px}
+    .hero-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}.text-link{font-size:12px;border-bottom:1px solid #77736a;padding-bottom:5px}
+    .visual{height:490px;position:relative;overflow:hidden;background:linear-gradient(145deg,#5c6252,#272c25 48%,#171714);border-radius:3px}
+    .visual:before{content:"";position:absolute;width:65%;height:115%;left:18%;top:-5%;background:linear-gradient(90deg,#111 0 17%,#34352e 18% 44%,#0d0e0c 45% 60%,#5b574a 61% 78%,#171714 79%);transform:rotate(7deg);filter:contrast(1.1)}
+    .visual:after{content:"NORTHLINE / EST. 2018";position:absolute;bottom:24px;left:25px;font-size:10px;letter-spacing:.2em;color:#f4f0e6}
+    .visual-label{position:absolute;z-index:1;right:22px;top:22px;background:var(--lime);color:#171714;padding:9px 12px;font-size:10px;font-weight:900;letter-spacing:.12em}
+    .strip{background:var(--lime);color:#171714;padding:17px 0;font-size:11px;font-weight:900;letter-spacing:.19em;text-transform:uppercase;overflow:hidden;white-space:nowrap}
+    .section{padding:105px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}
+    h2{font-size:clamp(38px,5vw,62px);letter-spacing:-.06em;line-height:.98;margin:12px 0 0}.section-note{color:#aaa69a;max-width:290px;font-size:13px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+    .service{padding:27px 24px 30px 0;border-bottom:1px solid var(--line);min-height:190px}.service+.service{padding-left:24px;border-left:1px solid var(--line)}
+    .service small{color:var(--lime);font-size:10px;letter-spacing:.15em}.service h3{font-size:21px;margin:25px 0 8px}.service p{color:#aaa69a;font-size:13px;margin:0}.price{font-family:var(--serif);font-size:27px;margin-top:18px}
+    .about{background:var(--paper);color:var(--ink)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .about-art{height:420px;background:linear-gradient(135deg,#d7d0bd,#8a8b77 50%,#333b31);position:relative;overflow:hidden}
+    .about-art:before{content:"";position:absolute;width:58%;height:115%;left:22%;top:-5%;background:linear-gradient(90deg,#242720,#777a69 35%,#272a23 65%,#9a927e);transform:rotate(-12deg)}
+    .about p{color:#5e5c54;max-width:440px}.about .eyebrow{color:#59623b}
+    .details{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}.detail{border-top:1px solid #c7c1b4;padding-top:12px;font-size:12px}.detail strong{display:block;font-size:15px;margin-bottom:4px}
+    .booking{padding:100px 0;text-align:center;background:#20211c}.booking h2{max-width:720px;margin:18px auto 22px}.booking p{color:#aaa69a;margin:0 auto 30px;max-width:420px;font-size:14px}
+    footer{padding:28px 0;color:#928f85;font-size:11px;display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line)}
+    .demo{position:fixed;bottom:14px;right:14px;background:#f4f0e6;color:#171714;padding:10px 13px;font-size:10px;font-weight:800;letter-spacing:.08em;box-shadow:0 5px 24px #0005}
+    @media(max-width:760px){.wrap{width:min(100% - 34px,560px)}.nav{height:70px}.links{display:none}.nav-cta{padding:11px 13px;font-size:10px}.hero{grid-template-columns:1fr;gap:35px;padding:65px 0}.visual{height:360px;grid-row:1}.hero-copy{grid-row:2}h1{font-size:clamp(58px,15vw,86px)}.section{padding:75px 0}.section-head{display:block}.section-note{margin-top:20px}.services{grid-template-columns:1fr}.service,.service+.service{padding:23px 0;border-left:0;min-height:0}.service h3{margin:14px 0 6px}.about-grid{grid-template-columns:1fr;gap:35px}.about-art{height:300px}.booking{padding:75px 0}footer{flex-direction:column}.demo{font-size:9px}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="logo" href="#">NORTHLINE<span>.</span></a>
+    <nav class="links" aria-label="Main navigation"><a href="#services">Services</a><a href="#story">Our story</a><a href="#visit">Find us</a></nav>
+    <a class="nav-cta" href="#visit">Book a chair ↗</a>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Independent barbershop · London</div>
+        <h1>Sharp cuts.<br><em>Good people.</em></h1>
+        <p class="intro">A proper neighbourhood barbershop for considered cuts, clean fades and no-fuss good service. Walk in as you are. Leave feeling sharper.</p>
+        <div class="hero-actions"><a class="button" href="#visit">Book your appointment ↗</a><a class="text-link" href="#services">Explore services ↓</a></div>
+      </div>
+      <div class="visual" role="img" aria-label="Abstract editorial barber-inspired artwork"><span class="visual-label">GOOD HAIR, NO DRAMA</span></div>
+    </section>
+
+    <div class="strip">GOOD CUTS · GOOD CONVERSATION · GOOD COFFEE · GOOD CUTS · GOOD CONVERSATION · GOOD COFFEE ·</div>
+
+    <section class="wrap section" id="services">
+      <div class="section-head"><div><div class="eyebrow">The menu</div><h2>Made for your<br>kind of style.</h2></div><p class="section-note">Straightforward services, thoughtful details and time set aside to get it right.</p></div>
+      <div class="services">
+        <article class="service"><small>01 / THE CLASSIC</small><h3>Classic haircut</h3><p>A tailored cut, finished and styled to suit you.</p><div class="price">£28</div></article>
+        <article class="service"><small>02 / THE DETAIL</small><h3>Skin fade</h3><p>Clean transitions, sharp edges and a precise finish.</p><div class="price">£32</div></article>
+        <article class="service"><small>03 / THE FINISH</small><h3>Beard trim</h3><p>Shape, tidy and define. Finished with care.</p><div class="price">£18</div></article>
+      </div>
+    </section>
+
+    <section class="about section" id="story">
+      <div class="wrap about-grid">
+        <div class="about-art" role="img" aria-label="Abstract editorial barbershop artwork"></div>
+        <div><div class="eyebrow">A little about us</div><h2>Your local.<br>Your look.</h2><p>Northline is a fictional neighbourhood barbershop concept built around one simple idea: great service should feel personal. No hard sell, no rush — just skilled hands and a cut that feels like you.</p><p>Whether you know exactly what you want or need a second opinion, pull up a chair. We'll figure it out together.</p>
+          <div class="details"><div class="detail"><strong>Good to know</strong>Appointments recommended</div><div class="detail"><strong>Walk-ins</strong>Welcome when available</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking" id="visit">
+      <div class="wrap"><div class="eyebrow">Come on in</div><h2>Ready for a<br><em style="font-family:Georgia,serif;color:var(--lime)">fresh start?</em></h2><p>Get in touch to book your next cut. We’ll save you a chair.</p><a class="button" href="mailto:hello@example.com?subject=Barbershop%20appointment">Request an appointment ↗</a></div>
+    </section>
+  </main>
+
+  <footer class="wrap"><span>© 2026 NORTHLINE BARBERS · DEMO CONCEPT</span><span>Designed by HEWERONE STUDIO</span></footer>
+  <div class="demo">PORTFOLIO DEMO · FICTIONAL BUSINESS</div>
+</body>
+</html>
